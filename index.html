@@ -1,170 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkateBros</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-<body>
-
-  <header class="main-header">
-    <div class="header-container">
-      <a href="#inicio" class="logo">
-        <span class="logo-accent">Skate</span>Bros
-      </a>
-      
-      <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-          <li><a href="#acerca" class="nav-link">Acerca de</a></li>
-          <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <button class="cart-btn" id="cart-icon-btn" aria-label="Ver Carrito">
-          <i data-lucide="shopping-bag"></i>
-          <span class="cart-count" id="cart-count">0</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-
-    <section id="inicio" class="hero-section">
-      <div class="hero-content fade-in">
-        <h1 class="hero-title">RODA SIN <span class="highlight">LÍMITES</span></h1>
-        <p class="hero-subtitle">Equipamiento pro para skaters de calle y rampa. Máxima durabilidad y agarre.</p>
-        <a href="#catalogo" class="btn btn-primary">Ver Catálogo</a>
-      </div>
-    </section>
-
-    <section id="acerca" class="about-section">
-      <div class="container">
-        <h2 class="section-title">ACERCA DE <span class="highlight">NOSOTROS</span></h2>
-        <div class="about-grid">
-          <div class="about-card">
-            <i data-lucide="flame" class="card-icon"></i>
-            <h3>Pasión Urbana</h3>
-            <p>Nacidos en las calles, diseñamos y seleccionamos componentes probados por skaters reales.</p>
-          </div>
-          <div class="about-card">
-            <i data-lucide="shield-check" class="card-icon"></i>
-            <h3>Calidad Pro</h3>
-            <p>Tablas de arce canadiense de 7 capas con el mayor pop del mercado.</p>
-          </div>
-          <div class="about-card">
-            <i data-lucide="truck" class="card-icon"></i>
-            <h3>Envío Rápido</h3>
-            <p>Recibe tu setup completo o piezas directo en tu puerta listo para sesionar.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="catalogo" class="catalog-section">
-      <div class="container">
-        <h2 class="section-title">NUESTRO <span class="highlight">CATÁLOGO</span></h2>
-        
-        <div class="product-grid" id="product-grid">
-          <!-- Tarjeta de Producto 1 -->
-          <article class="product-card">
-            <div class="product-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?q=80&w=500&auto=format&fit=crop" alt="Tabla Street Flame" class="product-img">
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Tabla Street Flame 8.0"</h3>
-              <p class="product-price">$899 MXN</p>
-              <button class="btn btn-secondary add-to-cart-btn" data-id="1" data-name="Tabla Street Flame 8.0&quot;" data-price="899">
-                Agregar al Carrito
-              </button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?q=80&w=500&auto=format&fit=crop" alt="Lija Pro Grip Orange" class="product-img">
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Lija Pro Grip Orange</h3>
-              <p class="product-price">$250 MXN</p>
-              <button class="btn btn-secondary add-to-cart-btn" data-id="2" data-name="Lija Pro Grip Orange" data-price="250">
-                Agregar al Carrito
-              </button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1531565637446-32307b194362?q=80&w=500&auto=format&fit=crop" alt="Ruedas Uretano 52mm" class="product-img">
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Ruedas Uretano 52mm</h3>
-              <p class="product-price">$450 MXN</p>
-              <button class="btn btn-secondary add-to-cart-btn" data-id="3" data-name="Ruedas Uretano 52mm" data-price="450">
-                Agregar al Carrito
-              </button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <aside id="cart-drawer" class="cart-drawer">
-      <div class="cart-header">
-        <h2>Tu Carrito</h2>
-        <button id="close-cart-btn" class="close-btn">&times;</button>
-      </div>
-      <div class="cart-body" id="cart-items">
-        <p class="empty-msg">Tu carrito está vacío.</p>
-      </div>
-      <div class="cart-footer">
-        <div class="cart-total">
-          <span>Total:</span>
-          <span id="cart-total-price">$0 MXN</span>
-        </div>
-        <button class="btn btn-primary btn-block">Finalizar Compra</button>
-      </div>
-    </aside>
-    <div id="cart-overlay" class="cart-overlay"></div>
-  </main>
-
-  <footer class="main-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkateBros</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container">
         <a href="#inicio" class="logo">
-          <span class="logo-accent">URBAN</span>SKATE
+          <span class="logo-accent">Skate</span>Bros
         </a>
-        <p>Tu tienda de skate 100% dedicada a la cultura de calle.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Navegación</h4>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#acerca">Acerca de</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
-        </ul>
-      </div>
-      <div class="footer-social">
-        <h4>Síguenos</h4>
-        <div class="social-icons">
-          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-          <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
-          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+
+        <nav class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+            <li><a href="#acerca" class="nav-link">Acerca de</a></li>
+            <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="cart-btn" id="cart-icon-btn" aria-label="Ver Carrito">
+            <i data-lucide="shopping-bag"></i>
+            <span class="cart-count" id="cart-count">0</span>
+          </button>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Urban Skate Shop. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+    </header>
 
-  <script src="assets/js/main.js"></script>
-  <script>
-    lucide.createIcons();
-  </script>
-</body>
+    <main>
+      <section id="inicio" class="hero-section">
+        <div class="hero-content fade-in">
+          <h1 class="hero-title">
+            RODA SIN <span class="highlight">LÍMITES</span>
+          </h1>
+          <p class="hero-subtitle">
+            Equipamiento pro para skaters de calle y rampa. Máxima durabilidad y
+            agarre.
+          </p>
+          <a href="#catalogo" class="btn btn-primary">Ver Catálogo</a>
+        </div>
+      </section>
+
+      <section id="acerca" class="about-section">
+        <div class="container">
+          <h2 class="section-title">
+            ACERCA DE <span class="highlight">NOSOTROS</span>
+          </h2>
+          <div class="about-grid">
+            <div class="about-card">
+              <i data-lucide="flame" class="card-icon"></i>
+              <h3>Pasión Urbana</h3>
+              <p>
+                Nacidos en las calles, diseñamos y seleccionamos componentes
+                probados por skaters reales.
+              </p>
+            </div>
+            <div class="about-card">
+              <i data-lucide="shield-check" class="card-icon"></i>
+              <h3>Calidad Pro</h3>
+              <p>
+                Tablas de arce canadiense de 7 capas con el mayor pop del
+                mercado.
+              </p>
+            </div>
+            <div class="about-card">
+              <i data-lucide="truck" class="card-icon"></i>
+              <h3>Envío Rápido</h3>
+              <p>
+                Recibe tu setup completo o piezas directo en tu puerta listo
+                para sesionar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalogo" class="catalog-section">
+        <div class="container">
+          <h2 class="section-title">
+            NUESTRO <span class="highlight">CATÁLOGO</span>
+          </h2>
+
+          <div class="product-grid" id="product-grid">
+            <!-- Tarjeta de Producto 1 -->
+            <article class="product-card">
+              <div class="product-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?q=80&w=500&auto=format&fit=crop"
+                  alt="Tabla Street Flame"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Tabla Street Flame 8.0"</h3>
+                <p class="product-price">$899 MXN</p>
+                <button
+                  class="btn btn-secondary add-to-cart-btn"
+                  data-id="1"
+                  data-name='Tabla Street Flame 8.0"'
+                  data-price="899"
+                >
+                  Agregar al Carrito
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?q=80&w=500&auto=format&fit=crop"
+                  alt="Lija Pro Grip Orange"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Lija Pro Grip Orange</h3>
+                <p class="product-price">$250 MXN</p>
+                <button
+                  class="btn btn-secondary add-to-cart-btn"
+                  data-id="2"
+                  data-name="Lija Pro Grip Orange"
+                  data-price="250"
+                >
+                  Agregar al Carrito
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1531565637446-32307b194362?q=80&w=500&auto=format&fit=crop"
+                  alt="Ruedas Uretano 52mm"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Ruedas Uretano 52mm</h3>
+                <p class="product-price">$450 MXN</p>
+                <button
+                  class="btn btn-secondary add-to-cart-btn"
+                  data-id="3"
+                  data-name="Ruedas Uretano 52mm"
+                  data-price="450"
+                >
+                  Agregar al Carrito
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <aside id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+          <h2>Tu Carrito</h2>
+          <button id="close-cart-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-body" id="cart-items">
+          <p class="empty-msg">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-price">$0 MXN</span>
+          </div>
+          <a href="ShoppingCart.html" class="btn btn-primary btn-block"
+            >Finalizar la compra</a
+          >
+        </div>
+      </aside>
+      <div id="cart-overlay" class="cart-overlay"></div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="#inicio" class="logo">
+            <span class="logo-accent">URBAN</span>SKATE
+          </a>
+          <p>Tu tienda de skate 100% dedicada a la cultura de calle.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca">Acerca de</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"
+              ><i data-lucide="instagram"></i
+            ></a>
+            <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Urban Skate Shop. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+      /* cart code moved to assets/js/ShoppingCart.js */
+    </script>
+    <script src="assets/js/ShoppingCart.js"></script>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
 </html>
