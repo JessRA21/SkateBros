@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -11,37 +11,39 @@
 
   <header class="main-header">
     <div class="header-container">
-      <a href="#inicio" class="logo">
+      <a href="index.html" class="logo">
         <span class="logo-accent">Skate</span>Bros
       </a>
-      
+
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
-          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-          <li><a href="#acerca" class="nav-link">Acerca de</a></li>
-          <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+          <li><a href="index.html" class="nav-link active">Inicio</a></li>
+          <li><a href="acerca.html" class="nav-link">Acerca de</a></li>
+          <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
         </ul>
       </nav>
 
-        <div class="header-actions">
-          <button class="cart-btn" id="cart-icon-btn" aria-label="Ver Carrito">
-            <i data-lucide="shopping-bag"></i>
-            <span class="cart-count" id="cart-count">0</span>
-          </button>
-        </div>
+      <div class="header-actions">
+        <button class="cart-btn" id="cart-icon-btn" aria-label="Ver Carrito">
+          <i data-lucide="shopping-bag"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
       </div>
-    </header>
+    </div>
+  </header>
 
   <main>
 
+    <!-- SECCIÓN HERO -->
     <section id="inicio" class="hero-section">
       <div class="hero-content fade-in">
         <h1 class="hero-title">RODA SIN <span class="highlight">LÍMITES</span></h1>
         <p class="hero-subtitle">Equipamiento pro para skaters de calle y rampa. Máxima durabilidad y agarre.</p>
-        <a href="#catalogo" class="btn btn-primary">Ver Catálogo</a>
+        <a href="catalogo.html" class="btn btn-primary">Ver Catálogo</a>
       </div>
     </section>
 
+    <!-- SECCIÓN ACERCA DE -->
     <section id="acerca" class="about-section">
       <div class="container">
         <h2 class="section-title">ACERCA DE <span class="highlight">NOSOTROS</span></h2>
@@ -65,54 +67,174 @@
       </div>
     </section>
 
+    <!-- SECCIÓN: EXPLORA POR CATEGORÍAS -->
+    <section id="categorias" class="categories-section">
+      <div class="container">
+        <h2 class="section-title">EXPLORA POR <span class="highlight">CATEGORÍA</span></h2>
+        <div class="categories-grid">
+          
+          <a href="catalogo.html" class="category-card-link">
+            <div class="category-card">
+              <i data-lucide="layers" class="category-icon"></i>
+              <h3>Tablas</h3>
+              <p>Maples de 7 capas, de varias medidas y concavidades.</p>
+            </div>
+          </a>
+
+          <a href="catalogo.html" class="category-card-link">
+            <div class="category-card">
+              <i data-lucide="disc" class="category-icon"></i>
+              <h3>Ruedas y Baleros</h3>
+              <p>Uretano de alta calidad y rodamientos de precisión.</p>
+            </div>
+          </a>
+
+          <a href="catalogo.html" class="category-card-link">
+            <div class="category-card">
+              <i data-lucide="wrench" class="category-icon"></i>
+              <h3>Trucks y Lijas</h3>
+              <p>Ejes resistentes y agarre duradero para cualquier terreno.</p>
+            </div>
+          </a>
+
+          <a href="catalogo.html" class="category-card-link">
+            <div class="category-card">
+              <i data-lucide="shirt" class="category-icon"></i>
+              <h3>Accesorios</h3>
+              <p>Herramientas T, cera, tornillería y streetwear.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CATÁLOGO CON BOTONES DE CARRITO E IMÁGENES LOCALES -->
     <section id="catalogo" class="catalog-section">
       <div class="container">
-        <h2 class="section-title">NUESTRO <span class="highlight">CATÁLOGO</span></h2>
+        <h2 class="section-title">LO MÁS <span class="highlight">VENDIDO</span></h2>
         
         <div class="product-grid" id="product-grid">
-          <!-- Tarjeta de Producto 1 -->
+          
+          <!-- Producto 1 -->
           <article class="product-card">
             <div class="product-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?q=80&w=500&auto=format&fit=crop" alt="Tabla Street Flame" class="product-img">
+              <img src="assets/images/TABLA STREET FLAME 80.jpg" alt="Tabla Street Flame" class="product-img">
             </div>
             <div class="product-info">
-              <h3 class="product-name">Tabla Street Flame 8.0"</h3>
-              <p class="product-price">$899 MXN</p>
+              <h3 class="product-name">TABLA STREET FLAME 8.0"</h3>
+              <p class="product-price">$899.00 MXN</p>
               <button class="btn btn-secondary add-to-cart-btn" data-id="1" data-name="Tabla Street Flame 8.0&quot;" data-price="899">
                 Agregar al Carrito
               </button>
             </div>
           </article>
 
+          <!-- Producto 2 -->
           <article class="product-card">
             <div class="product-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?q=80&w=500&auto=format&fit=crop" alt="Lija Pro Grip Orange" class="product-img">
+              <img src="assets/images/LIJA PRO GRIP ORANGE.jpg" alt="Lija Pro Grip Orange" class="product-img">
             </div>
             <div class="product-info">
-              <h3 class="product-name">Lija Pro Grip Orange</h3>
-              <p class="product-price">$250 MXN</p>
+              <h3 class="product-name">LIJA PRO GRIP ORANGE</h3>
+              <p class="product-price">$250.00 MXN</p>
               <button class="btn btn-secondary add-to-cart-btn" data-id="2" data-name="Lija Pro Grip Orange" data-price="250">
                 Agregar al Carrito
               </button>
             </div>
           </article>
 
+          <!-- Producto 3 -->
           <article class="product-card">
             <div class="product-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1531565637446-32307b194362?q=80&w=500&auto=format&fit=crop" alt="Ruedas Uretano 52mm" class="product-img">
+              <img src="assets/images/RUEDAS URETANO 52MM.jpg" alt="Ruedas Uretano 52mm" class="product-img">
             </div>
             <div class="product-info">
-              <h3 class="product-name">Ruedas Uretano 52mm</h3>
-              <p class="product-price">$450 MXN</p>
+              <h3 class="product-name">RUEDAS URETANO 52MM</h3>
+              <p class="product-price">$450.00 MXN</p>
               <button class="btn btn-secondary add-to-cart-btn" data-id="3" data-name="Ruedas Uretano 52mm" data-price="450">
                 Agregar al Carrito
               </button>
             </div>
           </article>
+
         </div>
+
+        <div class="btn-catalog-wrapper" style="text-align: center; margin-top: 2rem;">
+          <a href="catalogo.html" class="btn btn-primary">VER TODO EL CATÁLOGO</a>
+        </div>
+
       </div>
     </section>
 
+    <!-- SECCIÓN TESTIMONIOS: CARRUSEL -->
+    <section id="testimonios" class="testimonials-section">
+      <div class="container testimonial-container">
+        <h2 class="section-title">LO QUE DICE LA <span class="highlight">BANDA</span></h2>
+        
+        <div class="testimonial-carousel-wrapper">
+          <div id="testimonial-track" class="testimonial-track">
+            
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                <p class="testimonial-text">"La tabla resistió perfecto los impactos de rampa. El pop dura muchísimo comparado con otras marcas."</p>
+                <strong class="testimonial-author">— Uriel Franco (CDMX)</strong>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                <p class="testimonial-text">"El envío llegó en 2 días a Monterrey. La lija tiene un agarre excelente y los baleros corren suave."</p>
+                <strong class="testimonial-author">— Homar Carmona (MTY)</strong>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                <p class="testimonial-text">"Atención de 10 por el chat. Me orientaron sobre las medidas ideales para armar mi primer setup."</p>
+                <strong class="testimonial-author">— Anai Ortíz (GDL)</strong>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                <p class="testimonial-text">"Excelente calidad en los acabados y el empaque venía muy bien protegido. 100% recomendados."</p>
+                <strong class="testimonial-author">— Jessica Arroyo</strong>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="carousel-dots" class="carousel-dots">
+          <span class="dot active-dot" onclick="goToSlide(0)"></span>
+          <span class="dot" onclick="goToSlide(1)"></span>
+          <span class="dot" onclick="goToSlide(2)"></span>
+          <span class="dot" onclick="goToSlide(3)"></span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN NEWSLETTER -->
+    <section id="newsletter" class="newsletter-section">
+      <div class="container newsletter-container">
+        <i data-lucide="mail" class="newsletter-icon"></i>
+        <h2>ÚNETE AL CLUB <span class="highlight">SKATEBROS</span></h2>
+        <p class="newsletter-description">Recibe 10% de descuento en tu primera compra, drops exclusivos y noticias de eventos locales.</p>
+        
+        <form onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte al Club SkateBros!');" class="newsletter-form">
+          <input type="email" placeholder="Tu correo electrónico" required class="newsletter-input">
+          <button type="submit" class="btn btn-primary newsletter-btn">SUSCRIBIRME</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CARRITO SLIDE-OVER DE TU COMPAÑERO -->
     <aside id="cart-drawer" class="cart-drawer">
       <div class="cart-header">
         <h2>Tu Carrito</h2>
@@ -135,17 +257,17 @@
   <footer class="main-footer">
     <div class="footer-container">
       <div class="footer-brand">
-        <a href="#inicio" class="logo">
-          <span class="logo-accent">URBAN</span>SKATE
+        <a href="index.html" class="logo">
+          <span class="logo-accent">Skate</span>Bros
         </a>
         <p>Tu tienda de skate 100% dedicada a la cultura de calle.</p>
       </div>
       <div class="footer-links">
         <h4>Navegación</h4>
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#acerca">Acerca de</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="acerca.html">Acerca de</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
         </ul>
       </div>
       <div class="footer-social">
@@ -158,13 +280,40 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Urban Skate Shop. Todos los derechos reservados.</p>
+      <p>&copy; 2026 SkateBros. Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <script src="assets/js/main.js"></script>
   <script>
     lucide.createIcons();
+
+    /* LÓGICA DEL CARRUSEL DE TESTIMONIOS */
+    let currentSlide = 0;
+    const track = document.getElementById('testimonial-track');
+    const dots = document.querySelectorAll('#carousel-dots .dot');
+    const totalSlides = dots ? dots.length : 0;
+
+    function goToSlide(index) {
+      if (!track) return;
+      currentSlide = index;
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      
+      dots.forEach((dot, idx) => {
+        if (idx === currentSlide) {
+          dot.classList.add('active-dot');
+        } else {
+          dot.classList.remove('active-dot');
+        }
+      });
+    }
+
+    if (totalSlides > 0) {
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        goToSlide(currentSlide);
+      }, 4000);
+    }
   </script>
 </body>
 </html>
