@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito | SkateBros</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      /* Estilos propios de esta página */
+      .cart-page {
+        min-height: 70vh;
+      }
+      .cart-layout {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+      .cart-box {
+        background: var(--color-black);
+        border: 1px solid #282828;
+        border-radius: 8px;
+        padding: 1.5rem;
+      }
+      .cart-row {
+        display: grid;
+        grid-template-columns: 1fr auto auto auto;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid #282828;
+      }
+      .cart-row h3 {
+        font-size: 1rem;
+      }
+      .cart-row p {
+        color: var(--color-orange);
+        font-weight: bold;
+      }
+      .quantity-button,
+      .remove-button {
+        background: transparent;
+        color: var(--color-white);
+        border: 1px solid var(--color-orange);
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 0.25rem 0.55rem;
+      }
+      .quantity {
+        margin: 0 0.5rem;
+      }
+      .remove-button {
+        color: #ff8b8b;
+        border-color: #ff8b8b;
+      }
+      .cart-summary {
+        text-align: right;
+        padding-top: 1.5rem;
+      }
+      .cart-summary h2 {
+        margin-bottom: 1rem;
+      }
+      .empty-cart {
+        text-align: center;
+        color: var(--color-light-gray);
+        padding: 2rem;
+      }
+      @media (max-width: 650px) {
+        .cart-row {
+          grid-template-columns: 1fr auto;
+        }
+        .cart-row .price,
+        .cart-row .remove-button {
+          justify-self: end;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container">
+        <a href="index.html" class="logo"
+          ><span class="logo-accent">Skate</span>Bros</a
+        >
+        <nav>
+          <a href="index.html#catalogo" class="nav-link">Volver al catálogo</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="cart-page">
+      <div class="cart-layout">
+        <h1 class="section-title">MI <span class="highlight">CARRITO</span></h1>
+        <section class="cart-box">
+          <div id="cart-items"></div>
+          <div class="cart-summary">
+            <h2>
+              Total: <span id="cart-total" class="highlight">$0 MXN</span>
+            </h2>
+            <a href="ShoppingCart.html" id="checkout-button" class="btn btn-primary">
+              Finalizar compra
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-bottom">
+        <p>&copy; 2026 SkateBros. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Old cart code moved to assets/js/ShoppingCart.js
+    <script>
+      // Productos de ejemplo. El precio se guarda como número para poder sumar.
+      const products = [
+        { id: 1, name: 'Tabla Street Flame 8.0"', price: 899 },
+        { id: 2, name: "Lija Pro Grip Orange", price: 250 },
+        { id: 3, name: "Ruedas Uretano 52mm", price: 450 },
+      ];
+
+      // Recuperar el carrito guardado; si no existe, empezar con un carrito vacío.
+      let cart = JSON.parse(localStorage.getItem("skatebrosCart")) || [];
+
+      function saveCart() {
+        localStorage.setItem("skatebrosCart", JSON.stringify(cart));
+      }
+
+      function showCart() {
+        const itemsContainer = document.getElementById("cart-items");
+        const totalElement = document.getElementById("cart-total");
+
+        if (cart.length === 0) {
+          itemsContainer.innerHTML =
+            '<p class="empty-cart">Tu carrito está vacío.</p>';
+          totalElement.textContent = "$0 MXN";
+          return;
+        }
+
+        let total = 0;
+        itemsContainer.innerHTML = "";
+
+        cart.forEach((item) => {
+          const product = products.find((product) => product.id === item.id);
+          const itemTotal = product.price * item.quantity;
+          total += itemTotal;
+
+          itemsContainer.innerHTML += `
+          <div class="cart-row">
+            <div><h3>${product.name}</h3><p>$${product.price} MXN c/u</p></div>
+            <div>
+              <button class="quantity-button" onclick="changeQuantity(${item.id}, -1)">−</button>
+              <span class="quantity">${item.quantity}</span>
+              <button class="quantity-button" onclick="changeQuantity(${item.id}, 1)">+</button>
+            </div>
+            <strong class="price">$${itemTotal} MXN</strong>
+            <button class="remove-button" onclick="removeItem(${item.id})">Eliminar</button>
+          </div>`;
+        });
+
+        totalElement.textContent = `$${total} MXN`;
+      }
+
+      function changeQuantity(id, amount) {
+        const item = cart.find((item) => item.id === id);
+        item.quantity += amount;
+        if (item.quantity <= 0) removeItem(id);
+        else {
+          saveCart();
+          showCart();
+        }
+      }
+
+      function removeItem(id) {
+        cart = cart.filter((item) => item.id !== id);
+        saveCart();
+        showCart();
+      }
+
+      document
+        .getElementById("checkout-button")
+        .addEventListener("click", function () {
+          if (cart.length === 0) alert("Tu carrito está vacío.");
+          else alert("¡Gracias! La compra es una demostración.");
+        });
+
+      showCart();
+    </script>
+    -->
+    <script src="assets/js/ShoppingCart.js"></script>
+  </body>
+</html>
