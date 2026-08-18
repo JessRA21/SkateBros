@@ -8,7 +8,6 @@
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <!-- Contenedor para el Header dinámico -->
     <div id="header-placeholder"></div>
 
     <main>
@@ -207,7 +206,6 @@
 
     <script src="assets/js/ShoppingCart.js"></script>
     <script>
-      // Carga dinámica de Header y Footer
       async function loadComponent(id, file) {
         const response = await fetch(file);
         const text = await response.text();
