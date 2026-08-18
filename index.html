@@ -12,13 +12,13 @@
 
     <main>
       <!-- SECCIÓN HERO -->
-      <section id="inicio" class="hero-section">
-        <div class="hero-content fade-in">
-          <h1 class="hero-title">RODA SIN <span class="highlight">LÍMITES</span></h1>
-          <p class="hero-subtitle">Equipamiento pro para skaters de calle y rampa. Máxima durabilidad y agarre.</p>
-          <a href="catalogo.html" class="btn btn-primary">Ver Catálogo</a>
-        </div>
-      </section>
+        <section id="inicio" class="hero-section">
+          <div class="hero-content fade-in">
+           <h1 class="hero-title"> RUEDA SIN <span class="highlight"> LÍMITES </span></h1>
+           <p class="hero-subtitle">Equipamiento pro para skaters de calle y rampa. Máxima durabilidad y agarre.</p>
+           <a href="armatusetup.html" class="btn btn-primary">Arma tu Setup</a>
+          </div>
+       </section>
 
       <!-- SECCIÓN: EXPLORA POR CATEGORÍAS -->
       <section id="categorias" class="categories-section">
@@ -26,8 +26,10 @@
           <h2 class="section-title">
             EXPLORA POR <span class="highlight">CATEGORÍA</span>
           </h2>
-          <div class="categories-grid">
-            <a href="catalogo.html" class="category-card-link">
+          
+          <!-- FILA SUPERIOR: Tablas, Ruedas y Baleros, Lijas -->
+          <div class="categories-grid categories-top">
+            <a href="catalogoTablas.html" class="category-card-link">
               <div class="category-card">
                 <i data-lucide="layers" class="category-icon"></i>
                 <h3>Tablas</h3>
@@ -35,7 +37,7 @@
               </div>
             </a>
 
-            <a href="catalogo.html" class="category-card-link">
+            <a href="catalogoRuedas.html" class="category-card-link">
               <div class="category-card">
                 <i data-lucide="disc" class="category-icon"></i>
                 <h3>Ruedas y Baleros</h3>
@@ -43,11 +45,22 @@
               </div>
             </a>
 
-            <a href="catalogo.html" class="category-card-link">
+            <a href="catalogoLijas.html" class="category-card-link">
+              <div class="category-card">
+                <i data-lucide="activity" class="category-icon"></i>
+                <h3>Lijas</h3>
+                <p>Agarre superior de alta fricción para un control total.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- FILA INFERIOR: Trucks y Accesorios -->
+          <div class="categories-grid categories-bottom">
+            <a href="catalogoTrucks.html" class="category-card-link">
               <div class="category-card">
                 <i data-lucide="wrench" class="category-icon"></i>
-                <h3>Trucks y Lijas</h3>
-                <p>Ejes resistentes y agarre duradero para cualquier terreno.</p>
+                <h3>Trucks</h3>
+                <p>Ejes resistentes y duraderos para cualquier terreno.</p>
               </div>
             </a>
 
@@ -59,6 +72,7 @@
               </div>
             </a>
           </div>
+
         </div>
       </section>
 
@@ -75,7 +89,7 @@
                 <img src="assets/images/TABLA STREET FLAME 80.jpg" alt="Tabla Street Flame" class="product-img" />
               </div>
               <div class="product-info">
-                <h3 class="product-name">TABLA STREET FLAME 8.0"</h3>
+                <h3 class="product-name">TABLA STREET FLAME 8.0 </h3>
                 <p class="product-price">$899.00 MXN</p>
                 <button class="btn btn-secondary add-to-cart-btn" data-id="1" data-name='Tabla Street Flame 8.0"' data-price="899">
                   Agregar al Carrito
@@ -210,7 +224,7 @@
         const response = await fetch(file);
         const text = await response.text();
         document.getElementById(id).innerHTML = text;
-        lucide.createIcons(); // Renderiza los íconos cargados dinámicamente
+        lucide.createIcons();
       }
 
       document.addEventListener("DOMContentLoaded", async () => {
