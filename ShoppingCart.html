@@ -96,7 +96,11 @@
             <h2>
               Total: <span id="cart-total" class="highlight">$0 MXN</span>
             </h2>
-            <a href="ShoppingCart.html" id="checkout-button" class="btn btn-primary">
+            <a
+              href="ShoppingCart.html"
+              id="checkout-button"
+              class="btn btn-primary"
+            >
               Finalizar compra
             </a>
           </div>
@@ -110,83 +114,6 @@
       </div>
     </footer>
 
-    <!-- Old cart code moved to assets/js/ShoppingCart.js
-    <script>
-      // Productos de ejemplo. El precio se guarda como número para poder sumar.
-      const products = [
-        { id: 1, name: 'Tabla Street Flame 8.0"', price: 899 },
-        { id: 2, name: "Lija Pro Grip Orange", price: 250 },
-        { id: 3, name: "Ruedas Uretano 52mm", price: 450 },
-      ];
-
-      // Recuperar el carrito guardado; si no existe, empezar con un carrito vacío.
-      let cart = JSON.parse(localStorage.getItem("skatebrosCart")) || [];
-
-      function saveCart() {
-        localStorage.setItem("skatebrosCart", JSON.stringify(cart));
-      }
-
-      function showCart() {
-        const itemsContainer = document.getElementById("cart-items");
-        const totalElement = document.getElementById("cart-total");
-
-        if (cart.length === 0) {
-          itemsContainer.innerHTML =
-            '<p class="empty-cart">Tu carrito está vacío.</p>';
-          totalElement.textContent = "$0 MXN";
-          return;
-        }
-
-        let total = 0;
-        itemsContainer.innerHTML = "";
-
-        cart.forEach((item) => {
-          const product = products.find((product) => product.id === item.id);
-          const itemTotal = product.price * item.quantity;
-          total += itemTotal;
-
-          itemsContainer.innerHTML += `
-          <div class="cart-row">
-            <div><h3>${product.name}</h3><p>$${product.price} MXN c/u</p></div>
-            <div>
-              <button class="quantity-button" onclick="changeQuantity(${item.id}, -1)">−</button>
-              <span class="quantity">${item.quantity}</span>
-              <button class="quantity-button" onclick="changeQuantity(${item.id}, 1)">+</button>
-            </div>
-            <strong class="price">$${itemTotal} MXN</strong>
-            <button class="remove-button" onclick="removeItem(${item.id})">Eliminar</button>
-          </div>`;
-        });
-
-        totalElement.textContent = `$${total} MXN`;
-      }
-
-      function changeQuantity(id, amount) {
-        const item = cart.find((item) => item.id === id);
-        item.quantity += amount;
-        if (item.quantity <= 0) removeItem(id);
-        else {
-          saveCart();
-          showCart();
-        }
-      }
-
-      function removeItem(id) {
-        cart = cart.filter((item) => item.id !== id);
-        saveCart();
-        showCart();
-      }
-
-      document
-        .getElementById("checkout-button")
-        .addEventListener("click", function () {
-          if (cart.length === 0) alert("Tu carrito está vacío.");
-          else alert("¡Gracias! La compra es una demostración.");
-        });
-
-      showCart();
-    </script>
-    -->
     <script src="assets/js/ShoppingCart.js"></script>
   </body>
 </html>
