@@ -13,11 +13,9 @@
     <main>
       <section id="catalogo" class="catalog-section">
         <div class="container">
-          <!-- Título estilizado a dos colores -->
           <h2 class="section-title">RUEDAS Y <span class="highlight">BALEROS</span></h2>
           
           <div class="product-grid" id="product-grid">
-            <!-- Tarjeta 1 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/wheel1.jpg" alt="Ruedas Powell Peralta G-Bones (Black)" class="product-img">
@@ -25,13 +23,12 @@
               <div class="product-info">
                 <h3 class="product-name">Ruedas Powell Peralta G-Bones (Black)</h3>
                 <p class="product-price">$1200 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="1" data-name="Ruedas Powell Peralta G-Bones (Black)" data-price="1200">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="rued-1" data-name="Ruedas Powell Peralta G-Bones (Black)" data-price="1200">
                   Agregar al carrito
                 </button>
               </div>
             </article>
 
-            <!-- Tarjeta 2 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/wheel2.jpg" alt="Ruedas Spitfire Formula 4" class="product-img">
@@ -39,13 +36,12 @@
               <div class="product-info">
                 <h3 class="product-name">Ruedas Spitfire Formula 4</h3>
                 <p class="product-price">$1200 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="2" data-name="Ruedas Spitfire Formula 4" data-price="1200">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="rued-2" data-name="Ruedas Spitfire Formula 4" data-price="1200">
                   Agregar al carrito
                 </button>
               </div>
             </article>
 
-            <!-- Tarjeta 3 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/wheel3.jpg" alt="Ruedas Longboard" class="product-img">
@@ -53,13 +49,12 @@
               <div class="product-info">
                 <h3 class="product-name">Ruedas Longboard</h3>
                 <p class="product-price">$1300 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="3" data-name="Ruedas Longboard" data-price="1300">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="rued-3" data-name="Ruedas Longboard" data-price="1300">
                   Agregar al carrito
                 </button>
               </div>
             </article>
             
-            <!-- Tarjeta 4 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/wheel4.jpg" alt="Ruedas Clasfox" class="product-img">
@@ -67,13 +62,12 @@
               <div class="product-info">
                 <h3 class="product-name">Ruedas Clasfox</h3>
                 <p class="product-price">$1200 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="4" data-name="Ruedas Clasfox" data-price="1200">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="rued-4" data-name="Ruedas Clasfox" data-price="1200">
                   Agregar al carrito
                 </button>
               </div>
             </article>
             
-            <!-- Tarjeta 5 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/rod1.jpg" alt="Baleros Independient" class="product-img">
@@ -81,13 +75,12 @@
               <div class="product-info">
                 <h3 class="product-name">Baleros Independient</h3>
                 <p class="product-price">$320 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="5" data-name="Baleros Independient" data-price="320">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="rued-5" data-name="Baleros Independient" data-price="320">
                   Agregar al carrito
                 </button>
               </div>
             </article>
             
-            <!-- Tarjeta 6 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/rod2.jpg" alt="Baleros Spitfire Burners" class="product-img">
@@ -95,18 +88,36 @@
               <div class="product-info">
                 <h3 class="product-name">Baleros Spitfire Burners</h3>
                 <p class="product-price">$500 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="6" data-name="Baleros Spitfire Burners" data-price="500">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="rued-6" data-name="Baleros Spitfire Burners" data-price="500">
                   Agregar al carrito
                 </button>
               </div>
             </article>
-            
           </div>
         </div>
       </section>
+
+      <!-- CARRITO SLIDE-OVER -->
+       
+      <aside id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+          <h2>Tu Carrito</h2>
+          <button id="close-cart-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-body" id="cart-items">
+          <p class="empty-msg">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-price">$0 MXN</span>
+          </div>
+          <button id="checkout-button" class="btn btn-primary btn-block">Finalizar Compra</button>
+        </div>
+      </aside>
+      <div id="cart-overlay" class="cart-overlay"></div>
     </main>
 
-    <!-- Contenedor para el Footer dinámico -->
     <div id="footer-placeholder"></div>
 
     <script src="assets/js/ShoppingCart.js"></script>

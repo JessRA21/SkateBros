@@ -16,7 +16,9 @@
           <h2 class="section-title">NUESTRO <span class="highlight">CATÁLOGO</span></h2>
           
           <div class="product-grid" id="product-grid">
+
             <!-- Tarjeta de Producto 1: Tablas -->
+
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/board.png" alt="Tablas" class="product-img">
@@ -24,12 +26,13 @@
               <div class="product-info">
                 <h3 class="product-name">Tablas</h3>
                 <a href="catalogoTablas.html" class="btn btn-secondary">
-                  Ver Tablas
+                  Ver más
                 </a>
               </div>
             </article>
 
             <!-- Tarjeta de Producto 2: Lijas -->
+
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/grip.jpg" alt="Lijas" class="product-img">
@@ -37,12 +40,13 @@
               <div class="product-info">
                 <h3 class="product-name">Lijas</h3>
                 <a href="catalogoLijas.html" class="btn btn-secondary">
-                  Ver Lijas
+                  Ver más
                 </a>
               </div>
             </article>
 
             <!-- Tarjeta de Producto 3: Ruedas y Baleros -->
+
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/wheels.jpg" alt="Ruedas y Baleros" class="product-img">
@@ -50,12 +54,13 @@
               <div class="product-info">
                 <h3 class="product-name">Ruedas y Baleros</h3>
                 <a href="catalogoRuedas.html" class="btn btn-secondary">
-                  Ver Ruedas y Baleros
+                  Ver más
                 </a>
               </div>
             </article>
 
             <!-- Tarjeta de Producto 4: Trucks -->
+
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/trucks.png" alt="Trucks" class="product-img">
@@ -63,16 +68,37 @@
               <div class="product-info">
                 <h3 class="product-name">Trucks</h3>
                 <a href="catalogoTrucks.html" class="btn btn-secondary">
-                  Ver Trucks
+                  Ver más
                 </a>
               </div>
             </article>
           </div>
         </div>
       </section>
+
+      <!-- CARRITO SLIDE-OVER -->
+
+      <aside id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+          <h2>Tu Carrito</h2>
+          <button id="close-cart-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-body" id="cart-items">
+          <p class="empty-msg">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-price">$0 MXN</span>
+          </div>
+          <button id="checkout-button" class="btn btn-primary btn-block">Finalizar Compra</button>
+        </div>
+      </aside>
+      <div id="cart-overlay" class="cart-overlay"></div>
     </main>
 
     <!-- Contenedor para el Footer dinámico -->
+     
     <div id="footer-placeholder"></div>
 
     <script src="assets/js/ShoppingCart.js"></script>
@@ -81,7 +107,7 @@
         const response = await fetch(file);
         const text = await response.text();
         document.getElementById(id).innerHTML = text;
-        lucide.createIcons(); // Renderiza los íconos cargados dinámicamente
+        lucide.createIcons();
       }
 
       document.addEventListener("DOMContentLoaded", async () => {

@@ -16,7 +16,6 @@
           <h2 class="section-title">NUESTROS <span class="highlight">TRUCKS</span></h2>
           
           <div class="product-grid" id="product-grid">
-            <!-- Tarjeta 1 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/truck1.png" alt="Trucks Independient" class="product-img">
@@ -24,13 +23,12 @@
               <div class="product-info">
                 <h3 class="product-name">Trucks Independient</h3>
                 <p class="product-price">$1250 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="1" data-name="Trucks Independient" data-price="1250">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="truck-1" data-name="Trucks Independient" data-price="1250">
                   Agregar al carrito
                 </button>
               </div>
             </article>
 
-            <!-- Tarjeta 2 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/truck2.jpg" alt="Trucks Spitfire" class="product-img">
@@ -38,13 +36,12 @@
               <div class="product-info">
                 <h3 class="product-name">Trucks Spitfire</h3>
                 <p class="product-price">$1500 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="2" data-name="Trucks Spitfire" data-price="1500">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="truck-2" data-name="Trucks Spitfire" data-price="1500">
                   Agregar al carrito
                 </button>
               </div>
             </article>
 
-            <!-- Tarjeta 3 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/truck3.jpg" alt="Trucks Thunder" class="product-img">
@@ -52,13 +49,12 @@
               <div class="product-info">
                 <h3 class="product-name">Trucks Thunder</h3>
                 <p class="product-price">$1600 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="3" data-name="Trucks Thunder" data-price="1600">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="truck-3" data-name="Trucks Thunder" data-price="1600">
                   Agregar al carrito
                 </button>
               </div>
             </article>
             
-            <!-- Tarjeta 4 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/truck4.jpg" alt="Trucks Element" class="product-img">
@@ -66,18 +62,36 @@
               <div class="product-info">
                 <h3 class="product-name">Trucks Element</h3>
                 <p class="product-price">$800 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="4" data-name="Trucks Element" data-price="800">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="truck-4" data-name="Trucks Element" data-price="800">
                   Agregar al carrito
                 </button>
               </div>
             </article>
-            
           </div>
         </div>
       </section>
+
+      <!-- CARRITO SLIDE-OVER -->
+       
+      <aside id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+          <h2>Tu Carrito</h2>
+          <button id="close-cart-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-body" id="cart-items">
+          <p class="empty-msg">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-price">$0 MXN</span>
+          </div>
+          <button id="checkout-button" class="btn btn-primary btn-block">Finalizar Compra</button>
+        </div>
+      </aside>
+      <div id="cart-overlay" class="cart-overlay"></div>
     </main>
 
-    <!-- Contenedor para el Footer dinámico -->
     <div id="footer-placeholder"></div>
 
     <script src="assets/js/ShoppingCart.js"></script>

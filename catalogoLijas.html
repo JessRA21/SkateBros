@@ -13,11 +13,9 @@
     <main>
       <section id="catalogo" class="catalog-section">
         <div class="container">
-          <!-- Título con estilo de dos colores -->
           <h2 class="section-title">NUESTRAS <span class="highlight">LIJAS</span></h2>
           
           <div class="product-grid" id="product-grid">
-            <!-- Tarjeta 1 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/lija1.jpg" alt="Lija Independient" class="product-img">
@@ -25,13 +23,12 @@
               <div class="product-info">
                 <h3 class="product-name">Lija Independient</h3>
                 <p class="product-price">$340 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="1" data-name="Lija Independient" data-price="340">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="lija-1" data-name="Lija Independient" data-price="340">
                   Agregar al carrito
                 </button>
               </div>
             </article>
 
-            <!-- Tarjeta 2 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/lija2.jpg" alt="Lija Thrasher" class="product-img">
@@ -39,13 +36,12 @@
               <div class="product-info">
                 <h3 class="product-name">Lija Thrasher</h3>
                 <p class="product-price">$350 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="2" data-name="Lija Thrasher" data-price="350">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="lija-2" data-name="Lija Thrasher" data-price="350">
                   Agregar al carrito
                 </button>
               </div>
             </article>
 
-            <!-- Tarjeta 3 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/lija3.png" alt="Lija Thrasher Flame" class="product-img">
@@ -53,13 +49,12 @@
               <div class="product-info">
                 <h3 class="product-name">Lija Thrasher Flame</h3>
                 <p class="product-price">$350 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="3" data-name="Lija Thrasher Flame" data-price="350">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="lija-3" data-name="Lija Thrasher Flame" data-price="350">
                   Agregar al carrito
                 </button>
               </div>
             </article>
             
-            <!-- Tarjeta 4 -->
             <article class="product-card">
               <div class="product-img-wrapper">
                 <img src="assets/images/products/lija4.jpg" alt="Lija Grizzly" class="product-img">
@@ -67,18 +62,36 @@
               <div class="product-info">
                 <h3 class="product-name">Lija Grizzly</h3>
                 <p class="product-price">$400 MXN</p>
-                <button class="btn btn-secondary add-to-cart-btn" data-id="4" data-name="Lija Grizzly" data-price="400">
+                <button class="btn btn-secondary add-to-cart-btn" data-id="lija-4" data-name="Lija Grizzly" data-price="400">
                   Agregar al carrito
                 </button>
               </div>
             </article>
-            
           </div>
         </div>
       </section>
+
+      <!-- CARRITO SLIDE-OVER -->
+       
+      <aside id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+          <h2>Tu Carrito</h2>
+          <button id="close-cart-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-body" id="cart-items">
+          <p class="empty-msg">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-price">$0 MXN</span>
+          </div>
+          <button id="checkout-button" class="btn btn-primary btn-block">Finalizar Compra</button>
+        </div>
+      </aside>
+      <div id="cart-overlay" class="cart-overlay"></div>
     </main>
 
-    <!-- Contenedor para el Footer dinámico -->
     <div id="footer-placeholder"></div>
 
     <script src="assets/js/ShoppingCart.js"></script>

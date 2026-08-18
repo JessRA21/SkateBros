@@ -25,7 +25,6 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
 .main-header {
   background-color: var(--color-black);
   border-bottom: 2px solid var(--color-orange);
@@ -106,7 +105,6 @@ body {
   color: var(--color-white);
 }
 
-/* COMPONENTES GENERALES */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -158,7 +156,6 @@ body {
   color: var(--color-black);
 }
 
-/* SECCIÓN INICIO */
 .hero-section {
   height: 80vh;
   background: linear-gradient(rgba(13, 13, 13, 0.8), rgba(13, 13, 13, 0.8)), 
@@ -183,7 +180,6 @@ body {
   max-width: 600px;
 }
 
-/* SECCIÓN ACERCA DE */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -211,7 +207,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* SECCIÓN CATÁLOGO */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -257,7 +252,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* CARRITO SLIDE-OVER */
 .cart-drawer {
   position: fixed;
   top: 0;
@@ -335,7 +329,6 @@ body {
   display: block;
 }
 
-/* FOOTER */
 .main-footer {
   background-color: var(--color-black);
   border-top: 2px solid var(--color-orange);
@@ -398,12 +391,10 @@ body {
   color: var(--color-light-gray);
 }
 
-/* REDUCCIÓN GENERAL DE ESPACIADO DE SECCIONES */
 section {
   padding: 1.25rem 0 !important;
 }
 
-/* SECCIÓN CATEGORÍAS Y TESTIMONIOS */
 .categories-section,
 .testimonials-section {
   padding: 1.25rem 0;
@@ -461,7 +452,6 @@ section {
   color: #aaa;
 }
 
-/* CARRUSEL DE TESTIMONIOS */
 .testimonials-section {
   overflow: hidden;
 }
@@ -535,7 +525,6 @@ section {
   background-color: #ff5500;
 }
 
-/* SECCIÓN NEWSLETTER */
 .newsletter-section {
   padding: 1.25rem 1rem;
   background: linear-gradient(135deg, #181818 0%, #0a0a0a 100%);
@@ -595,4 +584,60 @@ section {
 .btn-catalog-wrapper {
   text-align: center;
   margin-top: 1rem;
+}
+
+.catalog-section .product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.catalog-section .product-info .btn {
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+}
+
+.setup-step {
+  display: none;
+}
+
+.setup-step.active-step {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.setup-option-card {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.setup-option-card.selected {
+  border: 2px solid #ff6600 !important;
+  background: rgba(255, 102, 0, 0.05);
+}
+
+.step-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+.step-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #333;
+  display: inline-block;
+}
+
+.step-dot.active {
+  background: #ff6600;
 }
