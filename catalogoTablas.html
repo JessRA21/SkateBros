@@ -1,153 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Skate Shop</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkateBros - Tablas</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
 
-
-
-</head>
-<body>
-
-<h1>Productos</h1>
-
-  <header class="main-header">
-    <div class="header-container">
-      <a href="index.html" class="logo">
-        <span class="logo-accent">Skate</span>Bros
-      </a>
-      
-      <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Inicio</a></li>
-          <li><a href="acerca.html" class="nav-link">Acerca de</a></li>
-          <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <button class="cart-btn" id="cart-icon-btn" aria-label="Ver Carrito">
-          <i data-lucide="shopping-bag"></i>
-          <span class="cart-count" id="cart-count">0</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-
-
-    
-<section id="catalogo" class="catalog-section">
-      <div class="container">
-        <h2 class="section-title">TABLAS <span class="highlight"></span></h2>
-        
-        <div class="product-grid" id="product-grid">
-          <!-- Tarjeta de Producto 1 -->
-          <article class="product-card">
-            <div class="product-img-wrapper">
-              <img src="/SkateBros/assets/images/products/tabla1.png" alt="Tabla" class="product-img">
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Tabla Cyberpunk</h3>
-              <p class="product-price">$650 MXN</p>
-              <button class="btn btn-secondary add-to-cart-btn" data-id="1" data-name="Tabla Street Flame 8.0&quot;" data-price="899">
-                Agregar al carrito
-              </button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrapper">
-              <img src="/SkateBros/assets/images/products/tabla2.jpg" alt="Lija" class="product-img">
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Tabla Zero</h3>
-              <p class="product-price">$600 MXN</p>
-              <button class="btn btn-secondary add-to-cart-btn" data-id="2" data-name="Lija Pro Grip Orange" data-price="600">
-                Agregar al carrito
-              </button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-img-wrapper">
-              <img src="/SkateBros/assets/images/products/tabla4.jpg" alt="Ruedas Uretano 52mm" class="product-img">
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Tabla Sanrio</h3>
-              <p class="product-price">$600 MXN</p>
-              <button class="btn btn-secondary add-to-cart-btn" data-id="3" data-name="Ruedas" data-price="600">
-                Agregar al carrito
-              </button>
-            </div>
-          </article>
+    <main>
+      <section id="catalogo" class="catalog-section">
+        <div class="container">
+          <!-- Título con el mismo estilo de dos colores del catálogo principal -->
+          <h2 class="section-title">NUESTRAS <span class="highlight">TABLAS</span></h2>
           
-          <article class="product-card">
-            <div class="product-img-wrapper">
-              <img src="/SkateBros/assets/images/products/tabla3.jpg" alt="Trucks" class="product-img">
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Tabla Punk</h3>
-              <p class="product-price">$550 MXN</p>
-              <button class="btn btn-secondary add-to-cart-btn" data-id="3" data-name="Ruedas Uretano 52mm" data-price="550">
-                Agregar al carrito
-              </button>
-            </div>
-          </article>
+          <div class="product-grid" id="product-grid">
+            <!-- Tarjeta 1 -->
+            <article class="product-card">
+              <div class="product-img-wrapper">
+                <img src="assets/images/products/tabla1.png" alt="Tabla Cyberpunk" class="product-img">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Tabla Cyberpunk</h3>
+                <p class="product-price">$650 MXN</p>
+                <button class="btn btn-secondary add-to-cart-btn" data-id="1" data-name="Tabla Cyberpunk" data-price="650">
+                  Agregar al carrito
+                </button>
+              </div>
+            </article>
 
-                    <article class="product-card">
-            <div class="product-img-wrapper">
-              <img src="/SkateBros/assets/images/products/tabla5.jpg" alt="Trucks" class="product-img">
-            </div>
-            <div class="product-info">
-              <h3 class="product-name">Tabla Sanrio Kitty</h3>
-              <p class="product-price">$650 MXN</p>
-              <button class="btn btn-secondary add-to-cart-btn" data-id="3" data-name="Ruedas Uretano 52mm" data-price="650">
-                Agregar al carrito
-              </button>
-            </div>
-          </article>
-          
+            <!-- Tarjeta 2 -->
+            <article class="product-card">
+              <div class="product-img-wrapper">
+                <img src="assets/images/products/tabla2.jpg" alt="Tabla Zero" class="product-img">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Tabla Zero</h3>
+                <p class="product-price">$600 MXN</p>
+                <button class="btn btn-secondary add-to-cart-btn" data-id="2" data-name="Tabla Zero" data-price="600">
+                  Agregar al carrito
+                </button>
+              </div>
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="product-card">
+              <div class="product-img-wrapper">
+                <img src="assets/images/products/tabla4.jpg" alt="Tabla Sanrio" class="product-img">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Tabla Sanrio</h3>
+                <p class="product-price">$600 MXN</p>
+                <button class="btn btn-secondary add-to-cart-btn" data-id="3" data-name="Tabla Sanrio" data-price="600">
+                  Agregar al carrito
+                </button>
+              </div>
+            </article>
+            
+            <!-- Tarjeta 4 -->
+            <article class="product-card">
+              <div class="product-img-wrapper">
+                <img src="assets/images/products/tabla3.jpg" alt="Tabla Punk" class="product-img">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Tabla Punk</h3>
+                <p class="product-price">$550 MXN</p>
+                <button class="btn btn-secondary add-to-cart-btn" data-id="4" data-name="Tabla Punk" data-price="550">
+                  Agregar al carrito
+                </button>
+              </div>
+            </article>
+
+            <!-- Tarjeta 5 -->
+            <article class="product-card">
+              <div class="product-img-wrapper">
+                <img src="assets/images/products/tabla5.jpg" alt="Tabla Sanrio Kitty" class="product-img">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Tabla Sanrio Kitty</h3>
+                <p class="product-price">$650 MXN</p>
+                <button class="btn btn-secondary add-to-cart-btn" data-id="5" data-name="Tabla Sanrio Kitty" data-price="650">
+                  Agregar al carrito
+                </button>
+              </div>
+            </article>
+            
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-    <footer class="main-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <a href="#inicio" class="logo">
-          <span class="logo-accent">URBAN</span>SKATE
-        </a>
-        <p>Tu tienda de skate 100% dedicada a la cultura de calle.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Navegación</h4>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#acerca">Acerca de</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
-        </ul>
-      </div>
-      <div class="footer-social">
-        <h4>Síguenos</h4>
-        <div class="social-icons">
-          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-          <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
-          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Urban Skate Shop. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+    <!-- Contenedor para el Footer dinámico -->
+    <div id="footer-placeholder"></div>
 
-  <script src="assets/js/ShoppingCart.js"></script><script>lucide.createIcons();</script>
-</body>
+    <script src="assets/js/ShoppingCart.js"></script>
+    <script>
+      async function loadComponent(id, file) {
+        const response = await fetch(file);
+        const text = await response.text();
+        document.getElementById(id).innerHTML = text;
+        lucide.createIcons(); // Renderiza los íconos cargados dinámicamente
+      }
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        await loadComponent("header-placeholder", "header.html");
+        await loadComponent("footer-placeholder", "footer.html");
+      });
+    </script>
+  </body>
 </html>
