@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acerca de | Urban Skate Shop</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <span class="logo-accent">URBAN</span>SKATE
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="acerca.html" class="nav-link active">Acerca de</a></li>
+          <li><a href="index.html#catalogo" class="nav-link">Catálogo</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cart-icon-btn" aria-label="Ver Carrito">
+          <i data-lucide="shopping-bag"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">TEAM <span class="highlight">SkateBros</span></h1>
+        <p class="hero-subtitle">Una empresa 100% Mexicana pionera en la fabricación de tablas de skate. Somos participes del crecimiento local y del desarrollo mutuo en el surf regional de la CDMXDe las calles para las calles. Conoce nuestra pasión urbana, nuestra calidad pro y a todo el equipo detrás de SkateBros Shop.</p>
+        <a href="index.html#catalogo" class="btn btn-primary">Ver Catálogo</a>
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="about-section">
+      <div class="container">
+        <h2 class="section-title">por que<span class="highlight">sí</span></h2>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <i data-lucide="flame" class="card-icon"></i>
+            <h3>Pasión Urbana</h3>
+            <p>Nacidos en las pistas de patinaje, diseñamos y seleccionamos componentes probados por skaters reales.</p>
+          </div>
+          <div class="about-card">
+            <i data-lucide="shield-check" class="card-icon"></i>
+            <h3>Calidad Pro</h3>
+            <p>Tablas de arce mexicano de 7 capas con los mejores diseños del mercado.</p>
+          </div>
+          <div class="about-card">
+            <i data-lucide="truck" class="card-icon"></i>
+            <h3>Envío Rápido</h3>
+            <p>Recibe tu setup completo, directo en tu puerta listo para sesionar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTADÍSTICAS / VALORES -->
+    <section class="about-section">
+      <div class="container">
+        <h2 class="section-title">NUESTRO <span class="highlight">COMPROMISO</span></h2>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <i data-lucide="award" class="card-icon"></i>
+            <h3>+8 Años</h3>
+            <p>Impulsando la cultura skate local y apoyando talentos emergentes.</p>
+          </div>
+          <div class="about-card">
+            <i data-lucide="smile" class="card-icon"></i>
+            <h3>+10,000 Skaters</h3>
+            <p>Equipados en todo el país con las mejores marcas y componentes.</p>
+          </div>
+          <div class="about-card">
+            <i data-lucide="check-circle" class="card-icon"></i>
+            <h3>100% Original</h3>
+            <p>Garantía de calidad y autenticidad directa de fábrica.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARRITO SLIDE-OVER -->
+    <aside id="cart-drawer" class="cart-drawer">
+      <div class="cart-header">
+        <h2>Tu Carrito</h2>
+        <button id="close-cart-btn" class="close-btn">&times;</button>
+      </div>
+      <div class="cart-body" id="cart-items">
+        <p class="empty-msg">Tu carrito está vacío.</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cart-total-price">$0 MXN</span>
+        </div>
+        <button class="btn btn-primary btn-secondary">Finalizar Compra</button>
+      </div>
+    </aside>
+    <div id="cart-overlay" class="cart-overlay"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-accent">URBAN</span>SKATE
+        </a>
+        <p>Tu tienda de skate 100% dedicada a la cultura de calle.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="acerca.html">Acerca de</a></li>
+          <li><a href="index.html#catalogo">Catálogo</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Urban Skate Shop. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
