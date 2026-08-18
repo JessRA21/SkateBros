@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Skate Shop</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+
+</head>
+<body>
+
+<h1>Productos</h1>
+
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#inicio" class="logo">
+        <span class="logo-accent">Skate</span>Bros
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#acerca" class="nav-link">Acerca de</a></li>
+          <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cart-icon-btn" aria-label="Ver Carrito">
+          <i data-lucide="shopping-bag"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+
+    
+<section id="catalogo" class="catalog-section">
+      <div class="container">
+        <h2 class="section-title">LIJAS <span class="highlight"></span></h2>
+        
+        <div class="product-grid" id="product-grid">
+          <!-- Tarjeta de Producto 1 -->
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="/SkateBros/assets/images/board.png" alt="Tabla" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tablas</h3>
+              <p class="product-price">$899 MXN</p>
+              <button class="btn btn-secondary add-to-cart-btn" data-id="1" data-name="Tabla Street Flame 8.0&quot;" data-price="899">
+                Ver Tablas
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="/SkateBros/assets/images/grip.jpg" alt="Lija" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lijas</h3>
+              <p class="product-price">$250 MXN</p>
+              <button class="btn btn-secondary add-to-cart-btn" data-id="2" data-name="Lija Pro Grip Orange" data-price="250">
+                Ver Lijas
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="https://picnicskateshop.com/wp-content/uploads/2026/06/spitfire-f4-radial-full-black-skate-ruedas.jpg" alt="Ruedas Uretano 52mm" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Ruedas y Baleros</h3>
+              <p class="product-price">$450 MXN</p>
+              <button class="btn btn-secondary add-to-cart-btn" data-id="3" data-name="Ruedas" data-price="450">
+                Ver Ruedas y Baleros
+              </button>
+            </div>
+          </article>
+          
+          <article class="product-card">
+            <div class="product-img-wrapper">
+              <img src="/SkateBros/assets/images/trucks.png" alt="Trucks" class="product-img">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Trucks</h3>
+              <p class="product-price">$450 MXN</p>
+              <button class="btn btn-secondary add-to-cart-btn" data-id="3" data-name="Ruedas Uretano 52mm" data-price="450">
+                Ver Trucks
+              </button>
+            </div>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo">
+          <span class="logo-accent">URBAN</span>SKATE
+        </a>
+        <p>Tu tienda de skate 100% dedicada a la cultura de calle.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#acerca">Acerca de</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Urban Skate Shop. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
