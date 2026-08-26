@@ -223,6 +223,7 @@ body {
 
 .product-card:hover {
   border-color: var(--color-orange);
+  overflow: visible; /*originalmente sin overflow*/
 }
 
 .product-img {
@@ -233,7 +234,8 @@ body {
 }
 
 .product-card:hover .product-img {
-  transform: scale(1.05);
+  transform: scale(1.2); /*originalmente 1.05*/
+  object-fit: scale-down; /*originalmente sin objfit*/
 }
 
 .product-info {
